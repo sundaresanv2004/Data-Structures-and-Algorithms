@@ -67,6 +67,7 @@ ll.add_last(25)
 ll.add_first(1)
 ll.add_last(20)
 ll.add_mid(16, 4)
+ll.add_mid(21, 5)
 ll.display()
 """
 print()
