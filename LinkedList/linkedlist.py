@@ -123,6 +123,19 @@ class LinkedList:
         node1.next = node2.next
         node2.next = temp
 
+    def reverse(self):
+        if self.head is None:
+            print("List is Empty!")
+        else:
+            prev = None
+            temp = self.head
+            while temp:
+                next_node = temp.next
+                temp.next = prev
+                prev = temp
+                temp = next_node
+            self.head = prev
+
     def display(self):
         if self.head is None:
             print("List is empty!")
@@ -151,8 +164,9 @@ while True:
     print("6. Delete middle node.")
     print("7. Delete last node.")
     print("8. Swap two nodes.")
-    print("9. Display.")
-    print("10. Exit.")
+    print("9. Reverse.")
+    print("10. Display.")
+    print("11. Exit.")
     print()
     user_input = str(input("Enter the option: "))
     print()
@@ -189,8 +203,11 @@ while True:
         ll.swap_elements(a1, a2)
         ll.display()
     elif user_input == "9":
+        ll.reverse()
         ll.display()
     elif user_input == "10":
+        ll.display()
+    elif user_input == "11":
         print()
         print("--- Thank You ---")
         print()
