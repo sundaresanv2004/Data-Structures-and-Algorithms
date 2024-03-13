@@ -108,6 +108,8 @@ class LinkedList {
         let node2 = this.head;
         let pre1 = null;
         let pre2 = null;
+
+
     }
 
     display() {

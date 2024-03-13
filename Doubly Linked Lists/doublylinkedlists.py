@@ -48,6 +48,16 @@ class DoublyLinkedList:
             temp.next = new_node
             new_node.prev = temp
 
+    def reverse_list(self):
+        curr = self.head
+        new_head = None
+        while curr is not None:
+            curr.next, curr.prev = curr.prev, curr.next
+            new_head = curr
+            curr = curr.prev
+
+        self.head = new_head
+
     def display(self):
         if self.head is None:
             print("List is empty!")
@@ -68,6 +78,8 @@ ll.add_first(1)
 ll.add_last(20)
 ll.add_mid(16, 4)
 ll.add_mid(21, 5)
+ll.display()
+ll.reverse_list()
 ll.display()
 """
 print()
