@@ -1,3 +1,5 @@
+# Stack Data Structures Problems
+
 ## Easy Problems on Stack Data Structures
 
 - [x] The Celebrity Problem
